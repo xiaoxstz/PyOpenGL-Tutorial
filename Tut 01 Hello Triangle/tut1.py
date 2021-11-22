@@ -44,7 +44,7 @@ def createShader(shaderType, shaderFile):
         elif shaderType is GL_FRAGMENT_SHADER:
             strShaderType = "fragment"
         
-        print "Compilation failure for " + strShaderType + " shader:\n" + strInfoLog
+        print("Compilation failure for " + strShaderType + " shader:\n" + strInfoLog)
     
     return shader
 

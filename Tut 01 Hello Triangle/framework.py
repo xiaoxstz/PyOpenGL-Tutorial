@@ -44,7 +44,7 @@ def loadShader(shaderType, shaderFile):
         elif shaderType is GL_FRAGMENT_SHADER:
             strShaderType = "fragment"
         
-        print "Compilation failure for " + strShaderType + " shader:\n" + strInfoLog
+        print("Compilation failure for " + strShaderType + " shader:\n" + strInfoLog)
     
     return shader
 
@@ -62,7 +62,7 @@ def createProgram(shaderList):
         # Note that getting the error log is much simpler in Python than in C/C++
         # and does not require explicit handling of the string buffer
         strInfoLog = glGetProgramInfoLog(program)
-        print "Linker failure: \n" + strInfoLog
+        print("Linker failure: \n" + strInfoLog)
         
     for shader in shaderList:
         glDetachShader(program, shader)
